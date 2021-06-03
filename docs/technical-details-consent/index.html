@@ -124,7 +124,7 @@
                 </a>
             </li><li class="dlf-subnav__list-item">
                 <a class="dlf-subnav__list-item__link" href="#referenced-by" data-module-sub-nav="tab">
-                12 References
+                0 References
                 </a>
             </li>
         </ul>
@@ -134,13 +134,13 @@
 <div class="govuk-grid-row">    <div class="govuk-grid-column-two-thirds"><article class="data-record govuk-!-margin-bottom-6">
     <h4 class="govuk-heading-s data-record__identifier">#/planning-permission-type	/technical-details-consent</h4>
     <dl class="govuk-summary-list data-record__properties">            <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">planning-permission-type
-            </dt>
-            <dd class="govuk-summary-list__value">                <span class="dl-select-all">technical-details-consent</span>            </dd>
-        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">start-date
             </dt>
             <dd class="govuk-summary-list__value">                2021-02-04            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">planning-permission-type
+            </dt>
+            <dd class="govuk-summary-list__value">                <span class="dl-select-all">technical-details-consent</span>            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">entry-date
             </dt>
@@ -155,7 +155,7 @@
 <h3 class="govuk-heading-m">Associated information</h3>
 
 <ul class="govuk-list govuk-list--bullet">
-    <li><a href="https://digital-land.github.io/specification/schema/planning-permission-type/">View the planning-permission-type schema</a></li><li>This record is <a href="#referenced-by">referenced by 1 other planning related data record</a></li>
+    <li><a href="https://digital-land.github.io/specification/schema/planning-permission-type/">View the planning-permission-type schema</a></li>    <li>This record is <a href="#referenced-by">referenced by 0 other planning related data records</a></li>
 </ul>
 
 </div>
@@ -190,57 +190,7 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <h2 class="govuk-heading-m dlf-subnav__heading">Referenced by</h2>
-            <p class="govuk-body">This record is referenced by 12 other planning related data records.</p>
-            <h3 class="govuk-heading-s">Geography</h3>
-            <ul class="govuk-list govuk-list--bullet">                <li>
-                    <a href=/brownfield-land/local-authority-eng/LDS/SHL00201>SHL00201</a>
-                    <span class="secondary-text data-reference">(74603)</span>
-                </li>
-                <li>
-                    <a href=/brownfield-land/local-authority-eng/LDS/SHL01317>SHL01317</a>
-                    <span class="secondary-text data-reference">(74754)</span>
-                </li>
-                <li>
-                    <a href=/brownfield-land/local-authority-eng/LDS/SHL01485>SHL01485</a>
-                    <span class="secondary-text data-reference">(74787)</span>
-                </li>
-                <li>
-                    <a href=/brownfield-land/local-authority-eng/LDS/SHL01702>SHL01702</a>
-                    <span class="secondary-text data-reference">(74832)</span>
-                </li>
-                <li>
-                    <a href=/brownfield-land/local-authority-eng/LDS/SHL01703>SHL01703</a>
-                    <span class="secondary-text data-reference">(74833)</span>
-                </li>
-                <li>
-                    <a href=/brownfield-land/local-authority-eng/LDS/SHL01708>SHL01708</a>
-                    <span class="secondary-text data-reference">(74838)</span>
-                </li>
-                <li>
-                    <a href=/brownfield-land/local-authority-eng/LDS/SHL01709>SHL01709</a>
-                    <span class="secondary-text data-reference">(74839)</span>
-                </li>
-                <li>
-                    <a href=/brownfield-land/local-authority-eng/LDS/SHL01710>SHL01710</a>
-                    <span class="secondary-text data-reference">(74840)</span>
-                </li>
-                <li>
-                    <a href=/brownfield-land/local-authority-eng/LDS/SHL01713>SHL01713</a>
-                    <span class="secondary-text data-reference">(74841)</span>
-                </li>
-                <li>
-                    <a href=/brownfield-land/local-authority-eng/LDS/SHL01716>SHL01716</a>
-                    <span class="secondary-text data-reference">(74842)</span>
-                </li>
-                <li>
-                    <a href=/brownfield-land/local-authority-eng/LDS/SHL01717>SHL01717</a>
-                    <span class="secondary-text data-reference">(74843)</span>
-                </li>
-                <li>
-                    <a href=/brownfield-land/local-authority-eng/LDS/SHL01723>SHL01723</a>
-                    <span class="secondary-text data-reference">(74845)</span>
-                </li>
-</ul>
+            <p class="govuk-body">This record is referenced by 0 other planning related data records.</p>
 </div>
     </div>
 </div>
@@ -339,7 +289,7 @@
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const $nationalMapLink = document.querySelector('.dl-link-national-map')
     const mapComponent = new DLMaps.Map($mapElement).init({
-        initGeoJsonLoadCallback: function (urls, featureGroup) {
+        initZoomCallback: function (featureGroup) {
             console.log("initial load completed")
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()
